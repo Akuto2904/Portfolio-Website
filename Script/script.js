@@ -301,7 +301,7 @@ window.onscroll = function() {
     document.getElementById("footer").style.bottom = "0";
   } else {
     // Scrolling down - hide footer
-    document.getElementById("footer").style.bottom = "-60px"; // match footer height
+    document.getElementById("footer").style.bottom = "-65px"; // match footer height
   }
   
   prevScrollpos = currentScrollPos;
