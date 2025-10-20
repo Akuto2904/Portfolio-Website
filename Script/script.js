@@ -295,13 +295,19 @@ var prevScrollpos = window.pageYOffset;
 
 window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
-  
-  if (prevScrollpos > currentScrollPos) {
+
+    // Check if user has scrolled to the bottom
+  var scrolledToBottom = (window.innerHeight + window.pageYOffset) >= document.body.scrollHeight - 2;
+
+    if (scrolledToBottom) {
+    // At the bottom - always show footer
+    document.querySelector(".footer").style.bottom = "0";
+  } else if (prevScrollpos > currentScrollPos) {
     // Scrolling up - show footer
     document.querySelector(".footer").style.bottom = "0";
   } else {
-    // Scrolling down - hide footer
-    document.querySelector(".footer").style.bottom = "-80px"; // match footer height
+    // Scrolling down (and not at bottom) - hide footer
+    document.querySelector(".footer").style.bottom = "-80px";
   }
   
   prevScrollpos = currentScrollPos;
