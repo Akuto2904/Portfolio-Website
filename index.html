@@ -1,0 +1,402 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional Portfolio - Showcasing My Programming Projects">
+    <title>My Portfolio</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="C:\Users\akuto\OneDrive\Desktop\Website Portfolio Template with CSS HTML JavaScript Bootstrap\Styles\styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            
+            <a class="navbar-brand" href="#home">
+                <span class="brand-text">Dillon Blyth</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-8 mx-auto text-center">
+                    <div class="hero-content">
+                        <div class="profile-image-container mb-4">
+                            <img src="C:\Users\akuto\OneDrive\Desktop\Website Portfolio Template with CSS HTML JavaScript Bootstrap\Images\Badminton in Console.png" alt="Profile Picture" class="profile-image">
+                        </div>
+                        
+                        <h1 class="display-3 fw-bold mb-3">Hi, I'm <span class="text-primary">Dillon Blyth</span></h1>
+                        <h2 class="h3 mb-4 text-muted">Future Software Engineer</h2>
+                        
+                        <!-- TODO: Add your tagline/description -->
+                        <p class="lead mb-5">
+                            Passionate about creating innovative solutions and building amazing applications.
+                            <br>Rally your code, smash your goals.
+                        </p>
+                        
+                        <div class="hero-buttons">
+                            <a href="#projects" class="btn btn-primary btn-lg me-3">View My Work</a>
+                            <a href="#contact" class="btn btn-outline-primary btn-lg">Get In Touch</a>
+                        </div>
+                        
+                        <!-- TODO: Add your social media links -->
+                        <div class="social-links mt-5">
+                            <a href="https://github.com/Akuto2904" class="social-icon" title="GitHub"><i class="bi bi-github"></i></a>
+                            <a href="https://www.linkedin.com/in/dillon-blyth-242139285" class="social-icon" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                            <a href="#" class="social-icon" title="Twitter"><i class="bi bi-twitter"></i></a>
+                            <a href="#" class="social-icon" title="Email"><i class="bi bi-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <a href="#about"><i class="bi bi-chevron-down"></i></a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="section-header text-center mb-5">
+                        <h2 class="section-title">About Me</h2>
+                        <div class="section-divider"></div>
+                    </div>
+                    
+                    <!-- TODO: Add your bio/about information -->
+                    <div class="about-content">
+                        <p class="lead">
+                            Write a compelling introduction about yourself here. Describe your background, 
+                            passion for programming, and what drives you as a developer.
+                        </p>
+                        <p>
+                            Add more details about your journey, education, experience, and what makes you unique. 
+                            This is your opportunity to tell your story and connect with visitors to your portfolio.
+                        </p>
+                        <p>
+                            Include information about your interests, specializations, and career goals. 
+                            Make it personal and authentic to help potential employers or clients get to know you.
+                        </p>
+                    </div>
+                    
+                    <div class="text-center mt-5">
+                        <a href="JP Morgan Inisght CV.pdf" class="btn btn-primary btn-lg">
+                            <i class="bi bi-download me-2"></i>Download Resume
+                        </a>
+                    </div>
+                    <div class="text-center mt-5">
+                        <a href="JP Morgan Spring Into Software.pdf" class="btn btn-primary btn-lg">
+                            <i class="bi bi-download me-2"></i>Download Job Description
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section-padding">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2 class="section-title">Skills & Technologies</h2>
+                <div class="section-divider"></div>
+                <p class="text-muted mt-3">Technologies and tools I work with</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="bi bi-code-slash"></i>
+                        </div>
+                        <h4>Frontend</h4>
+                        <ul class="skill-list">
+                            <li>HTML5 & CSS3</li>
+                            <li>JavaScript </li>
+                            <li>Bootstrap</li>
+                            <li>Responsive Design</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="bi bi-server"></i>
+                        </div>
+                        <h4>Backend</h4>
+                        <ul class="skill-list">
+                            <li>Python</li>
+                            <li>Express.js</li>
+                            <li>C</li>
+                            <li>C++</li>
+                            <li>Java</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="bi bi-database"></i>
+                        </div>
+                        <h4>Database</h4>
+                        <ul class="skill-list">
+                            <li>Microsoft SQL</li>
+                            <li>MySQL</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="bi bi-tools"></i>
+                        </div>
+                        <h4>Tools & Others</h4>
+                        <ul class="skill-list">
+                            <li>Git & GitHub</li>
+                            <li>VS Code</li>
+                            <li>Agile/Scrum</li>
+                            <li>CI/CD</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2 class="section-title">My Projects</h2>
+                <div class="section-divider"></div>
+                <p class="text-muted mt-3">A showcase of my recent work</p>
+            </div>
+            
+            <!-- TODO: Add your projects here - Copy and modify the project cards below -->
+            <div class="row g-4">
+                <!-- Project Card 1 - TEMPLATE -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="C:\Users\akuto\OneDrive\Desktop\Website Portfolio Template with CSS HTML JavaScript Bootstrap\Images\Badminton in Console.png" alt="Project 1">
+                            <div class="project-overlay">
+                                <a href="#" class="btn btn-light btn-sm me-2" target="_blank">
+                                    <i class="bi bi-eye"></i> Demo
+                                </a>
+                                <a href="https://github.com/Akuto2904/Badminton-in-Console" class="btn btn-dark btn-sm" target="_blank">
+                                    <i class="bi bi-github"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4>Badminton in Console</h4>
+                            <p>Small python script designed to make a badminton racquet and shuttle display in the console.</p>
+                            <div class="project-tags">
+                                <span class="badge bg-primary">Python</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project Card 2 - TEMPLATE -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="C:\Users\akuto\OneDrive\Desktop\Website Portfolio Template with CSS HTML JavaScript Bootstrap\Images\Scribble Image.png" alt="Project 2">
+                            <div class="project-overlay">
+                                <a href="#" class="btn btn-light btn-sm me-2" target="_blank">
+                                    <i class="bi bi-eye"></i> Demo
+                                </a>
+                                <a href="https://github.com/Akuto2904/Scribble/tree/main/Final%20Assignment" class="btn btn-dark btn-sm" target="_blank">
+                                    <i class="bi bi-github"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4>Scribble</h4>
+                            <p>Scrabble made in Java, following most of the rules. No integrated GUI, just using the command line as a display and a 2D array of char's for the board.</p>
+                            <div class="project-tags">
+                                <span class="badge bg-primary">Java</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project Card 3 - TEMPLATE -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="C:\Users\akuto\OneDrive\Desktop\Website Portfolio Template with CSS HTML JavaScript Bootstrap\Images\Supermarket Binary Tree.png" alt="Project 3">
+                            <div class="project-overlay">
+                                <a href="#" class="btn btn-light btn-sm me-2" target="_blank">
+                                    <i class="bi bi-eye"></i> Demo
+                                </a>
+                                <a href="https://github.com/Akuto2904/Supermarket-Binary-Tree/tree/main/SupermarketBinaryTree" class="btn btn-dark btn-sm" target="_blank">
+                                    <i class="bi bi-github"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4>Supermarket Binary Tree</h4>
+                            <p>A binary tree implementation for managing supermarket product inventory.</p>
+                            <div class="project-tags">
+                                <span class="badge bg-primary">Java</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- ADD MORE PROJECT CARDS HERE - Just copy one of the above cards and modify the content -->
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="section-divider"></div>
+                <p class="text-muted mt-3">Feel free to reach out for collaborations or just a friendly hello</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <!-- TODO: Add your contact information -->
+                    <div class="contact-info mb-5">
+                        <div class="row g-4">
+                            <div class="col-md-4 text-center">
+                                <div class="contact-item">
+                                    <i class="bi bi-envelope-fill"></i>
+                                    <h5>Email</h5>
+                                    <p>dillonrblyth29@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <div class="contact-item">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                    <h5>Location</h5>
+                                    <p>Dundee, Scotland</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <div class="contact-item">
+                                    <i class="bi bi-phone-fill"></i>
+                                    <h5>Phone</h5>
+                                    <p>+44 7341 251430</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Form -->
+                    <!-- TODO: Connect this form to your email service (e.g., FormSpree, EmailJS) -->
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="name" class="form-label">Name</label>
+                                        <input type="text" class="form-control" id="name" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="subject" class="form-label">Subject</label>
+                                        <input type="text" class="form-control" id="subject" required>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="message" class="form-label">Message</label>
+                                        <textarea class="form-control" id="message" rows="5" required></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary btn-lg w-100">
+                                        <i class="bi bi-send me-2"></i>Send Message
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        <div id="formMessage" class="mt-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <!-- TODO: Add your name and copyright year -->
+                    <p class="mb-0">&copy; 2025 Dillon Blyth. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <!-- TODO: Add your social media links -->
+                    <div class="footer-social">
+                        <a href="https://github.com/Akuto2904" class="text-white me-3"><i class="bi bi-github"></i></a>
+                        <a href="https://www.linkedin.com/in/dillon-blyth-242139285/" class="text-white me-3"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="C:\Users\akuto\OneDrive\Desktop\Website Portfolio Template with CSS HTML JavaScript Bootstrap\Script\script.js"></script>
+</body>
+</html>
+
