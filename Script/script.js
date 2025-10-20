@@ -298,15 +298,14 @@ window.onscroll = function() {
   
   if (prevScrollpos > currentScrollPos) {
     // Scrolling up - show footer
-    document.getElementById("footer").style.bottom = "0";
+    document.querySelector(".footer").style.bottom = "0";
   } else {
     // Scrolling down - hide footer
-    document.getElementById("footer").style.bottom = "-65px"; // match footer height
+    document.querySelector(".footer").style.bottom = "-80px"; // match footer height
   }
   
   prevScrollpos = currentScrollPos;
 }
-
 // ==========================================
 // Console Message
 // ==========================================
