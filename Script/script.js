@@ -290,6 +290,23 @@ backToTopButton.addEventListener('click', () => {
     });
 });
 
+// Make Footer Stick and Scroll
+var prevScrollpos = window.pageYOffset;
+
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  
+  if (prevScrollpos > currentScrollPos) {
+    // Scrolling up - show footer
+    document.getElementById("footer").style.bottom = "0";
+  } else {
+    // Scrolling down - hide footer
+    document.getElementById("footer").style.bottom = "-60px"; // match footer height
+  }
+  
+  prevScrollpos = currentScrollPos;
+}
+
 // ==========================================
 // Console Message
 // ==========================================
