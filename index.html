@@ -10,10 +10,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="./Styles/styles.css">
+
+    <!-- Bootstrap Icons CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="Styles\styles.css">
+    <link rel="stylesheet" href="./Styles/styles.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -26,8 +29,9 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item">
                         <a class="nav-link" href="#home">Home</a>
                     </li>
@@ -43,6 +47,13 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
+                    <!-- Theme Toggle Button -->
+                    <li class="nav-item ms-lg-3 my-2 my-lg-0">
+                        <button id="themeToggle" class="btn theme-toggle-btn btn-sm d-flex align-items-center px-3 py-2 rounded-pill" aria-label="Toggle theme" title="Toggle Light/Dark Mode">
+                            <i class="bi bi-moon-fill me-2" id="themeIcon"></i>
+                            <span id="themeText">Dark Mode</span>
+                        </button>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -55,16 +66,15 @@
                 <div class="col-lg-8 mx-auto text-center">
                     <div class="hero-content">
                         <div class="profile-image-container mb-4">
-                            <img src=".\Images\Badminton in Console.png" alt="Profile Picture" class="profile-image">
+                            <img src="./Images/Badminton in Console.png" alt="Profile Picture" class="profile-image">
                         </div>
                         
-                        <h1 class="display-3 fw-bold mb-3">Hi, I'm <span class="text-primary">Dillon Blyth</span></h1>
-                        <h2 class="h3 mb-4 text-muted">Future Software Engineer</h2>
+                        <h1 class="display-3 fw-bold mb-3">Hi, I'm Dillon Blyth</h1>
+                        <h2 class="h3 mb-4 text-info">Future Software Engineer</h2>
                         
                         <!-- TODO: Add your tagline/description -->
                         <p class="lead mb-5">
-                            Passionate about creating innovative solutions and building amazing applications.
-                            <br>Rally your code, smash your goals.
+                            Passionate about complex problem solving and in depth thinking
                         </p>
                         
                         <div class="hero-buttons">
@@ -76,8 +86,6 @@
                         <div class="social-links mt-5">
                             <a href="https://github.com/Akuto2904" class="social-icon" title="GitHub"><i class="bi bi-github"></i></a>
                             <a href="https://www.linkedin.com/in/dillon-blyth-242139285" class="social-icon" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                            <a href="#" class="social-icon" title="Twitter"><i class="bi bi-twitter"></i></a>
-                            <a href="#" class="social-icon" title="Email"><i class="bi bi-envelope"></i></a>
                         </div>
                     </div>
                 </div>
@@ -98,27 +106,31 @@
                         <div class="section-divider"></div>
                     </div>
                     
-                    <!-- TODO: Add your bio/about information -->
                     <div class="about-content">
-                        <p class="lead">
-                            I am Dillon, I have a very strong interest in software development, and have done for many years. This is because I am an inquisitive mind, always asking why things happen and why things work. One thing that always perplexed me from a young age
-                            is how computer software works. That is why I enjoy spending my time learning about and developing software, to help interest more people in my craft.
-                        </p>
-                        <p>
-                            My journey is just beginning, after high school I briskly moved onwards to university, in which I am currently studying at the univesrity of Dundee. I am hoping to quickly move onto developing more software in my free time, however, currently
-                            my free time is very limited.
-                        </p>
-                        <p>
-                            I love to play badminton in my free time, as well as do line judging for badminton Scotland. I also am actively interested in making software/websites to promote the sport widely and help it be more engaging. One of my main aims is to eventually
-                            develop an A.I. to help coach people badminton, however currently it is a bit of a pipe dream due to time constraints.
-                        </p>
-                    </div>
+    <p class="lead">
+        I am a BSc Computer Science student at the University of Dundee, driven by a passion for full-stack software engineering and AI model efficiency
+    </p>
+    <p>
+        My technical journey is focused on applying problem-solving and system optimization skills to scalable, real-world products.
+        I have built a strong foundation in data structures, algorithms, and object-oriented programming using C++, Java, and Python.
+        I am particularly fascinated by AI model quantization (INT8/PTQ), compiler pass design, and architecting cross-platform applications. 
+    </p>
+    <p>
+        Beyond the terminal, I balance my full-time studies with working as a Chef in a high-volume environment, averaging over 30 meals per hour during peak
+        service—an experience that has forged strong self-discipline and the ability to execute under strict time constraints. I also served as the Badminton
+        Club Convenor at the university, where I managed tournaments, coordinated logistics, and scheduled matches for ladder competitions. Previously, I
+        mentored junior students as a STEM Peer Tutor, honing my ability to break down complex mathematical and algorithmic concepts into accessible steps.
+    </p>
+    <p>
+        I am currently seeking a Software Engineering or AI/Systems Year in Industry or Summer Internship to apply my skills to impactful, real-world projects.
+    </p>
+</div>
                     
-                    <div class="text-center mt-5">
-                        <a href="JP Morgan Inisght CV.pdf" class="btn btn-primary btn-lg">
-                            <i class="bi bi-download me-2"></i>Download Resume
-                        </a>
-                    </div>
+                   <div class="text-center mt-5">
+        <a href="./CV Application/Dillon Blyth CV.pdf" class="btn btn-primary btn-lg" download>
+            <i class="bi bi-download me-2"></i>Download Resume
+        </a>
+    </div>
                 </div>
             </div>
         </div>
@@ -205,81 +217,79 @@
                 <p class="text-muted mt-3">A showcase of my recent work</p>
             </div>
             
-            <!-- TODO: Add your projects here - Copy and modify the project cards below -->
             <div class="row g-4">
-                <!-- Project Card 1 - TEMPLATE -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src=".\Images\Badminton in Console.png" alt="Project 1">
-                            <div class="project-overlay">
-                                <a href="#" class="btn btn-light btn-sm me-2" target="_blank">
-                                    <i class="bi bi-eye"></i> Demo
-                                </a>
-                                <a href="https://github.com/Akuto2904/Badminton-in-Console" class="btn btn-dark btn-sm" target="_blank">
-                                    <i class="bi bi-github"></i> Code
-                                </a>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h4>Badminton in Console</h4>
-                            <p>Small python script designed to make a badminton racquet and shuttle display in the console.</p>
-                            <div class="project-tags">
-                                <span class="badge bg-primary">Python</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project Card 2 - TEMPLATE -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src=".\Images\Scribble Image.png" alt="Project 2">
-                            <div class="project-overlay">
-                                <a href="#" class="btn btn-light btn-sm me-2" target="_blank">
-                                    <i class="bi bi-eye"></i> Demo
-                                </a>
-                                <a href="https://github.com/Akuto2904/Scribble/tree/main/Final%20Assignment" class="btn btn-dark btn-sm" target="_blank">
-                                    <i class="bi bi-github"></i> Code
-                                </a>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h4>Scribble</h4>
-                            <p>Scrabble made in Java, following most of the rules. No integrated GUI, just using the command line as a display and a 2D array of char's for the board.</p>
-                            <div class="project-tags">
-                                <span class="badge bg-primary">Java</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project Card 3 - TEMPLATE -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src=".\Images\Supermarket Binary Tree.png" alt="Project 3">
-                            <div class="project-overlay">
-                                <a href="#" class="btn btn-light btn-sm me-2" target="_blank">
-                                    <i class="bi bi-eye"></i> Demo
-                                </a>
-                                <a href="https://github.com/Akuto2904/Supermarket-Binary-Tree" class="btn btn-dark btn-sm" target="_blank">
-                                    <i class="bi bi-github"></i> Code
-                                </a>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h4>Supermarket Binary Tree</h4>
-                            <p>A binary tree implementation for managing supermarket product inventory.</p>
-                            <div class="project-tags">
-                                <span class="badge bg-primary">Java</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- ADD MORE PROJECT CARDS HERE - Just copy one of the above cards and modify the content -->
+
+                <!-- Project Card 1: Badminton App -->
+<div class="col-lg-4 col-md-6">
+    <div class="project-card">
+        <div class="project-image">
+            <!-- Tip: Take a screenshot of your app in an emulator, or use a wireframe/mockup for now -->
+            <img src="./Images/Badminton.jpg" alt="Badminton Training App">
+            <div class="project-overlay">
+                <a href="https://github.com/Akuto2904/Your-App-Repo" class="btn btn-dark btn-sm" target="_blank">
+                    <i class="bi bi-github"></i> Code
+                </a>
+            </div>
+        </div>
+        <div class="project-content">
+            <h4>Badminton Training App</h4>
+            <p>A full-stack, cross-platform mobile app featuring interactive footwork tutorials. Integrates hardware APIs for on-device video capture and utilizes an SQLite schema for user progression tracking.</p>
+            <div class="project-tags">
+                <span class="badge bg-primary">React Native</span>
+                <span class="badge bg-primary">Python</span>
+                <span class="badge bg-primary">SQLite</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Project Card 2: Pathfinding AI -->
+<div class="col-lg-4 col-md-6">
+    <div class="project-card">
+        <div class="project-image">
+            <!-- Tip: A screenshot of a generated graph or terminal output showing pathfinding metrics -->
+            <img src="./Images/Pathfinding.png" alt="Pathfinding Optimisation AI">
+            <div class="project-overlay">
+                <a href="https://github.com/keithlobo07/warehouse_manager" class="btn btn-dark btn-sm" target="_blank">
+                    <i class="bi bi-github"></i> Code
+                </a>
+            </div>
+        </div>
+        <div class="project-content">
+            <h4>Pathfinding Optimisation AI</h4>
+            <p>An AI system built to reduce wait times in high-density environments using weighted graphs and priority queues. Benchmarks Dijkstra and A* heuristics against runtime-optimality trade-offs.</p>
+            <div class="project-tags">
+                <span class="badge bg-primary">Python</span>
+                <span class="badge bg-primary">Graph Theory</span>
+                <span class="badge bg-primary">Algorithms</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Project Card 3: OO Software Suite (Former Binary Tree) -->
+<div class="col-lg-4 col-md-6">
+    <div class="project-card">
+        <div class="project-image">
+            <img src="./Images/Supermarket Binary Tree.png" alt="Object-Oriented Software Suite">
+            <div class="project-overlay">
+
+                <a href="https://github.com/Akuto2904/Supermarket-Binary-Tree/tree/main/SupermarketBinaryTree" class="btn btn-dark btn-sm" target="_blank">
+                    <i class="bi bi-github"></i> Code
+                </a>
+            </div>
+        </div>
+        <div class="project-content">
+            <h4>Object-Oriented Software Suite</h4>
+            <p>Engineered modular data structures (including binary search trees and custom arrays) for inventory management systems, focusing on rigorous unit testing and memory management principles.</p>
+            <div class="project-tags">
+                <span class="badge bg-primary">C++</span>
+                <span class="badge bg-primary">Java</span>
+                <span class="badge bg-primary">Data Structures</span>
+            </div>
+        </div>
+    </div>
+</div>
                 
             </div>
         </div>
@@ -379,8 +389,6 @@
                     <div class="footer-social">
                         <a href="https://github.com/Akuto2904" class="text-white me-3"><i class="bi bi-github"></i></a>
                         <a href="https://www.linkedin.com/in/dillon-blyth-242139285/" class="text-white me-3"><i class="bi bi-linkedin"></i></a>
-                        <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>
-                        <a href="#" class="text-white"><i class="bi bi-envelope"></i></a>
                     </div>
                 </div>
             </div>
@@ -391,7 +399,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     
     <!-- Custom JavaScript -->
-    <script src="Script\script.js"></script>
+    <script src="./Script/script.js"></script>
 </body>
 </html>
 

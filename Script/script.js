@@ -119,43 +119,31 @@ if (contactForm) {
             showMessage('Please enter a valid email address.', 'error');
             return;
         }
+
         
-        // TODO: Replace this with your actual form submission logic
-        // Options:
-        // 1. Use a service like FormSpree (https://formspree.io/)
-        // 2. Use EmailJS (https://www.emailjs.com/)
-        // 3. Connect to your own backend API
-        
-        // Example with FormSpree:
-        // fetch('https://formspree.io/f/YOUR_FORM_ID', {
-        //     method: 'POST',
-        //     headers: {
-        //         'Content-Type': 'application/json'
-        //     },
-        //     body: JSON.stringify({
-        //         name: name,
-        //         email: email,
-        //         subject: subject,
-        //         message: message
-        //     })
-        // })
-        // .then(response => {
-        //     if (response.ok) {
-        //         showMessage('Message sent successfully! I will get back to you soon.', 'success');
-        //         contactForm.reset();
-        //     } else {
-        //         showMessage('Oops! Something went wrong. Please try again.', 'error');
-        //     }
-        // })
-        // .catch(error => {
-        //     showMessage('Oops! Something went wrong. Please try again.', 'error');
-        // });
-        
-        // Simulated success message (remove this when you implement actual form submission)
-        showMessage('Form submission is not yet configured. Please add your email service integration.', 'error');
-        
-        // For demonstration purposes, log the form data
-        console.log('Form Data:', { name, email, subject, message });
+        fetch('https://formspree.io/f/mwlvloez', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            name: name,
+            email: email,
+            subject: subject,
+            message: message
+        })
+    })
+    .then(response => {
+        if (response.ok) {
+            showMessage('Message sent successfully! I will get back to you soon.', 'success');
+            contactForm.reset();
+        } else {
+            showMessage('Oops! Something went wrong. Please try again.', 'error');
+        }
+    })
+    .catch(error => {
+        showMessage('Oops! Something went wrong. Please try again.', 'error');
+    });
     });
 }
 
@@ -180,46 +168,7 @@ function isValidEmail(email) {
 }
 
 // ==========================================
-// Typing Effect for Hero Section (Optional)
-// ==========================================
-
-// Uncomment this section if you want a typing effect for your title
-/*
-const typingText = document.querySelector('.hero-section h2');
-if (typingText) {
-    const text = typingText.textContent;
-    typingText.textContent = '';
-    let i = 0;
-    
-    function typeWriter() {
-        if (i < text.length) {
-            typingText.textContent += text.charAt(i);
-            i++;
-            setTimeout(typeWriter, 100);
-        }
-    }
-    
-    setTimeout(typeWriter, 1000);
-}
-*/
-
-// ==========================================
-// Project Card Click Tracking (Optional)
-// ==========================================
-
-document.querySelectorAll('.project-card').forEach(card => {
-    card.addEventListener('click', function(e) {
-        // Only track if not clicking on a button
-        if (!e.target.closest('.btn')) {
-            const projectTitle = this.querySelector('h4').textContent;
-            console.log('Project viewed:', projectTitle);
-            // You can add analytics tracking here
-        }
-    });
-});
-
-// ==========================================
-// Back to Top Button (Optional Enhancement)
+// Back to Top Button
 // ==========================================
 
 // Create back to top button
@@ -290,32 +239,46 @@ backToTopButton.addEventListener('click', () => {
     });
 });
 
-// Make Footer Stick and Scroll
-var prevScrollpos = window.pageYOffset;
-
-window.onscroll = function() {
-  var currentScrollPos = window.pageYOffset;
-
-    // Check if user has scrolled to the bottom
-  var scrolledToBottom = (window.innerHeight + window.pageYOffset) >= document.body.scrollHeight - 2;
-
-    if (scrolledToBottom) {
-    // At the bottom - always show footer
-    document.querySelector(".footer").style.bottom = "0";
-  } else if (prevScrollpos > currentScrollPos) {
-    // Scrolling up - show footer
-    document.querySelector(".footer").style.bottom = "0";
-  } else {
-    // Scrolling down (and not at bottom) - hide footer
-    document.querySelector(".footer").style.bottom = "-80px";
-  }
-  
-  prevScrollpos = currentScrollPos;
-}
 // ==========================================
 // Console Message
 // ==========================================
 
-console.log('%c👋 Welcome to my portfolio!', 'font-size: 20px; color: #667eea; font-weight: bold;');
+console.log('%cWelcome to my portfolio!', 'font-size: 20px; color: #667eea; font-weight: bold;');
 console.log('%cInterested in the code? Check out the source on GitHub!', 'font-size: 14px; color: #764ba2;');
 
+// ==========================================
+// Light / Dark Mode Toggle with Text & Color State
+// ==========================================
+
+const themeToggle = document.getElementById('themeToggle');
+const themeIcon = document.getElementById('themeIcon');
+const themeText = document.getElementById('themeText');
+const body = document.body;
+
+// Check for saved user preference in localStorage on page load
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') {
+    body.classList.add('dark-mode');
+    if (themeIcon) {
+        themeIcon.classList.replace('bi-moon-fill', 'bi-sun-fill');
+    }
+    if (themeText) {
+        themeText.textContent = 'Light Mode';
+    }
+}
+
+if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('theme', 'dark');
+            themeIcon.classList.replace('bi-moon-fill', 'bi-sun-fill');
+            themeText.textContent = 'Light Mode';
+        } else {
+            localStorage.setItem('theme', 'light');
+            themeIcon.classList.replace('bi-sun-fill', 'bi-moon-fill');
+            themeText.textContent = 'Dark Mode';
+        }
+    });
+}
